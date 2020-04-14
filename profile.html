@@ -37,7 +37,7 @@
                 font-family: tahoma;
                 font-size: 14px;
                 font-weight: 400;
-                color: #8bc34a;
+                color:teal;
                 background-color: whitesmoke;
                 text-align: center;
                 position: relative;
@@ -65,7 +65,95 @@
                 translateY(200%) scale(25);
             }
 
+            .profile:hover,
+            .profile:hover .profile-value,
+            .profile:hover .profile-social{
+                color: whitesmoke;
+            }
 
+            .profile:hover .profile-group,
+            .profile:hover .profile-avatar{
+                border-color: whitesmoke;
+            }
+
+            .profile:hover .profile-stats{
+                background-color: teal;
+            }
+
+            .profile-header{
+                transition: color 0.4 ease-out .1s;
+            }
+
+            .profile-avatar{
+                border-radius: 50%;
+                width: 120px;
+                height: 120px;
+                border: 5px solid teal;
+                transition: border-color 0.4s ease-out .1s;
+
+            }
+
+            .profile:hover .profile-avatar{
+                transition-delay: 0.2s;
+            }
+
+            .profile-name{
+                margin-top: 10px;
+                margin-bottom: 0;
+                font-size: 30px;
+            }
+
+            .profile-stats{
+                display: flex;
+                justify-content: flex-start;
+                flex-wrap: wrap;
+                margin-top: 25px;
+                margin-bottom: 25px;
+                background-color: yellow;
+                padding-top: 25px;
+                padding-bottom: 25px;
+                transition: background-color 0.4s ease-out .1s;
+            }
+
+            .profile:hover .profile-stats{
+                transition-delay: 0.2s;
+            }
+
+            .profile-group{
+                box-sizing: border-box;
+                width: 33.3333%;
+                transition: border-color 0.4s ease-out .1s;
+                border-right: 1px solid goldenrod;
+                padding-left: 2%;
+                padding-right: 2%;
+            }
+
+            .profile:hover .profile-group{
+                transition-delay: 0.4s;
+            }
+
+            .profile-group:nth-child(n+4){
+                margin-top: 20px;
+            }
+
+            .profile-group:nth-child(3n+3){
+                border-right: none;
+            }
+
+            .profile-param .profile-value{
+                display: block;
+                transition: color 0.4s ease-out .1s;
+            }
+
+            .profile-param{
+                text-transform: uppercase;
+            }
+
+            .profile-value{
+                font-size: 30px;
+                color: teal;
+                font-weight: 700;
+            }
 
         </style>
     </head>
@@ -102,11 +190,6 @@
                     </div>
 
                     <div class="profile-group">
-                        <span class="profile-value">85%</span>
-                        <span class="profile-param">Content Management System</span>
-                    </div>
-
-                    <div class="profile-group">
                         <span class="profile-value">80%</span>
                         <span class="profile-param">Email Marketing</span>
                     </div>
@@ -115,23 +198,22 @@
                         <span class="profile-value">85%</span>
                         <span class="profile-param">Event Management</span>
                     </div>
-
-                    <footer class="profile-socials">
-                        <a href="" class="Profile-socials">
-                            <i class="fa fa-facebook"></i>
-                        </a>
-
-                        <a href="" class="Profile-socials">
-                            <i class="fa fa-linkedin"></i>
-                        </a>
-
-                        <a href="" class="Profile-socials">
-                            <i class="fa fa-twitter"></i>
-                        </a>
-
-                    </footer>
-
                 </div>
+                
+                <footer class="profile-socials">
+                    <a href="" class="Profile-socials">
+                        <i class="fa fa-facebook"></i>
+                    </a>
+
+                    <a href="" class="Profile-socials">
+                        <i class="fa fa-linkedin"></i>
+                    </a>
+
+                    <a href="" class="Profile-socials">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+
+                </footer>
             </article>
         </div>
 

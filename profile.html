@@ -3,6 +3,71 @@
     <head>
         <meta charset="UTF-8">
         <title>My Profile</title>
+        <link rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <style>
+
+
+            body{
+                margin: 0;
+                background-image: url(bg.jpg);
+                font-family: tahoma;
+            }
+
+            .page{
+                min-height: 100vh;
+                display: flex;
+            }
+
+            .page-container{
+                padding-left: 10px;
+                padding-right: 10px;
+                margin: auto;
+            }
+
+            .profile-avatar{
+                width: 380px;
+            }
+
+            .profile{
+                box-sizing: border-box;
+                max-width: 380px;
+                padding-top: 40px;
+                font-family: tahoma;
+                font-size: 14px;
+                font-weight: 400;
+                color: #8bc34a;
+                background-color: whitesmoke;
+                text-align: center;
+                position: relative;
+                z-index: 0;
+                overflow: hidden;
+            }
+
+            .profile:before{
+                content: "";
+                width: 85px;
+                height: 50px;
+                transition: transform 0.5s cubic-bezier(0.42,0.04,0.13,0.92);
+                border-radius: 50%;
+                background-color: teal;
+                position: absolute;
+                top: -70px;
+                left: 50%;
+                z-index: -1;
+                transform: translateX(-50%) scale(7);
+            }
+
+            .profile:hover:before{
+                transition: transform 0.7s cubic-bezier(0.77, 0.09, 0, 1.31);
+                transform: translateX(-50%)
+                translateY(200%) scale(25);
+            }
+
+
+
+        </style>
     </head>
 <body>
     
@@ -10,7 +75,7 @@
         <div class="page-container">
             <article class="profile">
                 <header class="profile-header">
-                    <img src="foto.jpg" alt="" class="profile-avatar">
+                    <img src="foto.png" alt="" class="profile-avatar">
                     <h3 class="profile-name">Yemima Inadia</h3>
                     <span class="profile-post">Public Relations</span>
                 </header>
@@ -50,6 +115,21 @@
                         <span class="profile-value">85%</span>
                         <span class="profile-param">Event Management</span>
                     </div>
+
+                    <footer class="profile-socials">
+                        <a href="" class="Profile-socials">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+
+                        <a href="" class="Profile-socials">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+
+                        <a href="" class="Profile-socials">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+
+                    </footer>
 
                 </div>
             </article>
